@@ -55,7 +55,7 @@ class Mail
 		if (class_exists('Mail_Postmark_Adapter', false)) {
 			$reflection = new ReflectionClass('Mail_Postmark_Adapter');
 
-			if (!$reflection->implementsInterface('MailAdapterInterface')) {
+            if (!$reflection->implementsInterface('Postmark\MailAdapterInterface')) {
 				trigger_error('Mail_Postmark_Adapter must implement interface MailAdapterInterface', E_USER_ERROR);
 			}
 
